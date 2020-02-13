@@ -14,10 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Gson gsonku = new Gson();
-        /*People peopleku = new People("Rohman", 18, "gmail@rohman.com");
-        String jsonku = gsonku.toJson(peopleku);*/
+        People.Address addressku = new People.Address("Rumah", "Griya Ciledug", "Tangerang");
+        People peopleku = new People("Rohman", 18, "gmail@rohman.com", addressku);
+        String jsonku = gsonku.toJson(peopleku);
 
-        String jsonku = "{\"people_age\":18,\"people_mail\":\"gmail@rohman.com\",\"people_name\":\"Rohman\"}";
-        People peopleku = gsonku.fromJson(jsonku, People.class);
+        /*String jsonku = "{\"people_age\":18,\"people_mail\":\"gmail@rohman.com\",\"people_name\":\"Rohman\"}";
+        People peopleku = gsonku.fromJson(jsonku, People.class);*/
     }
 }
